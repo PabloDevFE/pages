@@ -102,13 +102,10 @@ body {
     flex: 1;
 }
 
-
-
 .logo-img {
     display: block;
     margin: auto;
-    max-width: 200px;
-    margin-bottom: 20px;
+    max-width: 250px;
     border-radius: 8px;
 }
 
@@ -135,7 +132,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    cursor: grab; /* <-- ADICIONADO AQUI */
+    cursor: grab;
 }
 
 .slide {
@@ -181,7 +178,7 @@ body {
 }
 
 .slide-caption h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
