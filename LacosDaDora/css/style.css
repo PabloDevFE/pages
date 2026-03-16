@@ -377,6 +377,14 @@ footer {
     font-size: 0.9rem;
 }
 
+.creditos {
+    font-size: 0.8rem;
+}
+.creditos a {
+    color:#fff;
+    font-weight: bolder;
+}
+
 /* --- Responsividade (Celulares e Tablets) --- */
 @media (max-width: 900px) {
     .hero {
