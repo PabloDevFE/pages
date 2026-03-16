@@ -1,0 +1,469 @@
+/* Paleta de Cores e Variáveis Globais */
+:root {
+    --text-dark: #1b220b; /* Verde bem escuro/quase preto para textos */
+    --accent-primary: #89023e; /* Cereja/Vinho */
+    --accent-hover: #6d0433; /* Vinho mais escuro */
+    --bg-light-green: #d5ddbc; /* Verde oliva bem clarinho */
+    --bg-light-pink: #ffd5d0; /* Rosa salmão bem clarinho */
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(27, 34, 11, 0.08);
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Compensa o menu fixo ao rolar */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light-green); /* Cor de fundo principal */
+    line-height: 1.6;
+}
+
+/* --- Cabeçalho Fixo --- */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.header nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 30px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: var(--accent-primary);
+}
+
+/* --- Botões --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-primary);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* --- Seção 1: Hero --- */
+.hero {
+    min-height: 100vh;
+    padding: 100px 5% 50px 5%;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-light-green);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+
+
+.logo-img {
+    display: block;
+    margin: auto;
+    max-width: 200px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Carrossel */
+.hero-carousel {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: grab; /* <-- ADICIONADO AQUI */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* <-- ADICIONADO AQUI: Evita que o navegador arraste o arquivo da foto */
+    user-select: none; /* <-- ADICIONADO AQUI: Evita selecionar sem querer */
+}
+
+/* Degradê escuro sobre a imagem para o texto aparecer */
+.slide::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(27, 34, 11, 0.8), transparent);
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 45px;
+    left: 30px;
+    right: 30px;
+    z-index: 2;
+    color: var(--white);
+}
+
+.slide-caption h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* --- Indicadores do Carrossel (Bolinhas) --- */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--bg-light-pink);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombreado para destacar em fotos claras */
+    opacity: 0.7;
+}
+
+.dot:hover {
+    opacity: 1;
+}
+
+/* Bolinha da foto atual fica maior e na cor principal */
+.dot.active {
+    background-color: var(--accent-primary);
+    width: 25px; /* Vira uma "pílula" moderna */
+    border-radius: 10px;
+    opacity: 1;
+}
+
+/* --- Seção 2: Catálogo --- */
+.catalog {
+    background-color: var(--white);
+    padding: 80px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--accent-primary);
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(213, 221, 188, 0.5);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    color: var(--accent-hover);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    min-height: 70px; /* Alinha os botões embaixo */
+}
+
+.options-tags span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag {
+    background-color: var(--bg-light-pink);
+    color: var(--accent-hover);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* --- Seção 3: Sobre e Encomendas --- */
+.about-contact {
+    background-color: var(--bg-light-pink);
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.heart-icon i {
+    font-size: 3rem;
+    color: var(--accent-primary);
+    margin-bottom: 20px;
+}
+
+.contact-container h2 {
+    font-size: 2.2rem;
+    color: var(--accent-hover);
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.order-info {
+    font-size: 1.2rem;
+    color: var(--accent-primary);
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    color: var(--white);
+    padding: 18px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+    transform: scale(1.05);
+}
+
+.btn-whatsapp i {
+    font-size: 1.5rem;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade (Celulares e Tablets) --- */
+@media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 5% 50px 5%; 
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo-img {
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    /* --- Modificações do Carrossel no Mobile --- */
+    .hero-carousel {
+        width: 100%;
+        max-width: 300px; /* Aumentei levemente para caber bem o texto */
+        height: auto; 
+        aspect-ratio: 1 / 1; /* Formato Quadrado (1x1) */
+        margin: 0 auto; 
+        border-radius: 15px; 
+    }
+
+    /* Restaura o degradê escuro, mas ajusta a altura dele para a telinha */
+    .slide::after {
+        display: block;
+        height: 50%; /* Cobre metade da foto de baixo pra cima em degradê */
+        background: linear-gradient(to top, rgba(27, 34, 11, 0.9), transparent);
+    }
+
+    /* Restaura o título, mas diminui as margens para caber na caixa pequena */
+    .slide-caption {
+        display: block;
+        bottom: 30px; /* Margem menor que no PC */
+        left: 15px;
+        right: 15px;
+        text-align: center; /* Centraliza o texto para ficar mais elegante no mobile */
+    }
+
+    /* Diminui o tamanho da fonte do título do carrossel no celular */
+    .slide-caption h3 {
+        font-size: 1.1rem; /* Fonte menor para não engolir a foto */
+        line-height: 1.2;
+    }
+
+    .header nav {
+        display: none; 
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .contact-container {
+        padding: 30px 20px;
+    }
+    
+    .contact-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-whatsapp {
+        font-size: 1rem;
+        padding: 15px 25px;
+    }
+}
+
+/* Tratamento extra para telas muito pequenas (ex: iPhone SE antigo) */
+@media (max-width: 400px) {
+    .hero-carousel {
+        max-width: 250px; 
+    }
+    
+    /* Deixa a fonte ainda um pouquinho menor em telas minúsculas */
+    .slide-caption h3 {
+        font-size: 1rem; 
+    }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos | Feito à Mão</title>
+    <!-- Fonte moderna (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones (para o WhatsApp) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Fixo -->
+    <header class="header">
+        <div class="logo-text">Nome da Marca</div>
+        <nav>
+            <a href="#hero">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#encomendas">Encomendas</a>
+        </nav>
+    </header>
+
+    <!-- Seção 1: Hero (Apresentação + Carrossel) -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <!-- Parte Esquerda -->
+            <div class="hero-content">
+                <!-- Substitua pelo src da logo real -->
+                <img src="src/lacosDaDoraLogo.png" alt="Logo da Marca" class="logo-img">
+                <h1>Beleza e Delicadeza em Cada Detalhe</h1>
+                <p>Descubra nossa coleção exclusiva de acessórios feitos para realçar o que há de mais bonito. Produtos artesanais pensados para você e para quem você ama.</p>
+                <a href="#catalogo" class="btn-primary">Ver Nossos Produtos</a>
+            </div>
+
+            <!-- Parte Direita (Carrossel) -->
+            <div class="hero-carousel">
+                <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <img src="src/lacoAzul.png" alt="Laço Azul">
+                        <div class="slide-caption">
+                            <h3>Modelo Princesa Clássica</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <img src="src/lacoVermelho.png" alt="Laço Vermelho">
+                        <div class="slide-caption">
+                            <h3>Modelo Encanto Floral</h3>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <img src="src/lacoRosa.png" alt="Laço Rosa">
+                        <div class="slide-caption">
+                            <h3>Modelo Alegria Cotidiana</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 2: Cards de Catálogo -->
+    <section id="catalogo" class="catalog">
+        <div class="section-title">
+            <h2>Nossas Linhas</h2>
+            <p>Conheça os modelos perfeitos para cada fase e estilo</p>
+        </div>
+        
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=400" alt="Linha Bebê">
+                <div class="card-content">
+                    <h3>Linha Recém-Nascidos</h3>
+                    <p>Delicadeza e conforto extremo. Feitos para não apertar ou machucar a cabecinha sensível dos bebês.</p>
+                    <div class="options-tags">
+                        <span>Disponível em:</span>
+                        <div class="tags">
+                            <span class="tag">Faixa de Meia de Seda</span>
+                            <span class="tag">Bico de Pato forrado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1625890918797-29367204fcde?auto=format&fit=crop&q=80&w=400" alt="Linha Infantil">
+                <div class="card-content">
+                    <h3>Linha Kids / Escolar</h3>
+                    <p>Cores vivas e modelos estruturados para durar o dia todo, ideais para o dia a dia e passeios divertidos.</p>
+                    <div class="options-tags">
+                        <span>Disponível em:</span>
+                        <div class="tags">
+                            <span class="tag">Bico de Pato tradicional</span>
+                            <span class="tag">Xuxinha (Rabicó)</span>
+                            <span class="tag">Tiara (Arquinho)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1582213768220-4384b64e622b?auto=format&fit=crop&q=80&w=400" alt="Linha Festas">
+                <div class="card-content">
+                    <h3>Linha Festas & Luxo</h3>
+                    <p>Aplicações em pérolas, strass e tecidos finos. O detalhe que faltava para momentos inesquecíveis.</p>
+                    <div class="options-tags">
+                        <span>Disponível em:</span>
+                        <div class="tags">
+                            <span class="tag">Tiara de Luxo</span>
+                            <span class="tag">Bico de Pato grande</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3: Encomendas e Contato -->
+    <section id="encomendas" class="about-contact">
+        <div class="contact-container">
+            <div class="heart-icon"><i class="fa-solid fa-heart"></i></div>
+            <h2>Feito com Amor, Exclusivo para Você</h2>
+            <p>
+                Acreditamos que cada pessoa é única, e seus acessórios também devem ser. 
+                Todos os nossos produtos são <strong>100% artesanais</strong>, produzidos manualmente 
+                com matérias-primas selecionadas e muito carinho em cada ponto e laçada.
+            </p>
+            <p class="order-info">
+                Trabalhamos <strong>sob encomenda</strong> para garantir que você receba uma peça 
+                feita especialmente para o seu gosto, nas cores e acabamentos que desejar.
+            </p>
+            
+            <!-- Link do WhatsApp: Mude o "seunumerodetelefone" incluindo o código do país, ex: 5511999999999 -->
+            <a href="https://wa.me/5500000000000?text=Olá! Gostaria de fazer uma encomenda." target="_blank" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Faça sua Encomenda via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nome da Marca. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
