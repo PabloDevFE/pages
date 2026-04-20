@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Confiança | Oficina Mecânica Especializada</title>
+    <link rel="stylesheet" href="src/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header id="header">
+        <nav class="container">
+            <div class="logo">Auto<span>Confiança</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato" class="btn-nav">Agendar Agora</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Cuidamos do seu carro com a <span>confiança</span> que você merece.</h1>
+            <p>Manutenção preventiva, mecânica geral e diagnóstico avançado com tecnologia de ponta.</p>
+            <div class="hero-btns">
+                <a href="#contato" class="btn-primary">Solicitar Orçamento</a>
+                <a href="#servicos" class="btn-secondary">Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-engine-warning"></i>
+                    <i class="fa-solid fa-gear"></i>
+                    <h3>Mecânica Geral</h3>
+                    <p>Reparos em motores, suspensão, freios e transmissão com peças originais.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-car-battery"></i>
+                    <h3>Elétrica e Bateria</h3>
+                    <p>Diagnóstico completo do sistema elétrico e troca de baterias certificadas.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-oil-can"></i>
+                    <h3>Troca de Óleo</h3>
+                    <p>Troca rápida de óleo e filtros seguindo as especificações do fabricante.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Injeção Eletrônica</h3>
+                    <p>Scanner profissional para identificar e corrigir falhas no sistema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="container about-flex">
+            <div class="about-text">
+                <h2>Por que escolher a Auto Confiança?</h2>
+                <p>Com mais de 15 anos no mercado, nossa oficina combina tradição com tecnologia. Nossa equipe é constantemente treinada para lidar com veículos nacionais e importados.</p>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> Garantia em todos os serviços</li>
+                    <li><i class="fa-solid fa-check"></i> Orçamento transparente e sem surpresas</li>
+                    <li><i class="fa-solid fa-check"></i> Equipamentos de última geração</li>
+                </ul>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item"><strong>10k+</strong><p>Clientes Felizes</p></div>
+                <div class="stat-item"><strong>15+</strong><p>Anos de Experiência</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 class="section-title">Fale Conosco</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Agende sua visita</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Rua da Mecânica, 123 - Centro</p>
+                    <p><i class="fa-solid fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fa-solid fa-envelope"></i> contato@autoconfianca.com.br</p>
+                    <p><i class="fa-solid fa-clock"></i> Seg a Sex: 08h às 18h</p>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" id="name" placeholder="Seu Nome" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <input type="tel" id="phone" placeholder="Seu Telefone" required>
+                    <textarea id="message" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Auto Confiança - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
