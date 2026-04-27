@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Especialistas em reparo de computadores, notebooks e montagem de PCs Gamers.">
+    <title>TechRed | Soluções em Informática e Setup</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-microchip"></i> Tech<span>Red</span>
+            </a>
+            <button class="mobile-menu" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-links">
+                <a href="#sobre">Nossa Estrutura</a>
+                <a href="#servicos">Assistência</a>
+                <a href="#vitrine">Vitrine de Produtos</a>
+                <a href="#contato" class="btn-primary">Falar com Técnico</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner (Imagem de Fundo Grande) -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in">
+            <h1>Hardware levado a sério.<br><span>Reparo e Performance.</span></h1>
+            <p>Seu equipamento na mão de especialistas. Do conserto da placa-mãe ao setup gamer dos seus sonhos.</p>
+            <div class="hero-buttons">
+                <a href="#vitrine" class="btn-primary">Explorar Produtos</a>
+                <a href="#servicos" class="btn-secondary">Serviços de Reparo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Expositiva: Estrutura / Por que nós (Imagens lado a lado) -->
+    <section id="sobre" class="about section">
+        <div class="container about-grid">
+            <div class="about-text fade-in">
+                <h2 class="section-title left-align">Laboratório <span>Avançado</span></h2>
+                <p>Não somos apenas trocadores de peças. Possuímos um laboratório equipado para reparos complexos em placas e microeletrônica.</p>
+                <p>Além disso, nossa vitrine conta com peças de última geração para que você saia com o seu setup pronto para qualquer desafio, seja no escritório ou nos e-sports.</p>
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-check"></i> Orçamento transparente e rápido.</li>
+                    <li><i class="fa-solid fa-check"></i> Garantia em todos os serviços.</li>
+                    <li><i class="fa-solid fa-check"></i> Testes de stress em máquinas novas.</li>
+                </ul>
+            </div>
+            <div class="about-images fade-in">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Técnico soldando placa" class="img-main">
+                <img src="https://images.unsplash.com/photo-1694466464626-7bd06595cf2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Componentes de PC" class="img-secondary">
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços (Cards baseados em Imagens) -->
+    <section id="servicos" class="services section bg-alt">
+        <div class="container">
+            <h2 class="section-title">O que nós <span>Consertamos</span></h2>
+            <p class="section-subtitle">Trazemos seu equipamento de volta à vida.</p>
+            
+            <div class="image-grid">
+                <!-- Serviço 1 -->
+                <article class="image-card fade-in">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1693206816304-642a705045a1?q=80&w=1373&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Reparo de Notebook">
+                    </div>
+                    <div class="card-content">
+                        <h3>Notebooks</h3>
+                        <p>Troca de telas, baterias, teclados, recuperação de carcaça e reparo avançado em placa-mãe.</p>
+                    </div>
+                </article>
+
+                <!-- Serviço 2 -->
+                <article class="image-card fade-in">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Manutenção de Desktop">
+                    </div>
+                    <div class="card-content">
+                        <h3>Desktops</h3>
+                        <p>Limpeza profunda, troca de pasta térmica, cable management e formatação com backup.</p>
+                    </div>
+                </article>
+
+                <!-- Serviço 3 -->
+                <article class="image-card fade-in">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1694466049397-68368a38299a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Recuperação de dados HD">
+                    </div>
+                    <div class="card-content">
+                        <h3>Upgrades & Dados</h3>
+                        <p>Migração para SSDs ultrarrápidos e recuperação de dados de HDs corrompidos.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vitrine de Produtos (Fotos Grandes) -->
+    <section id="vitrine" class="store section">
+        <div class="container">
+            <h2 class="section-title">Nossa <span>Vitrine</span></h2>
+            <p class="section-subtitle">Monte seu setup com as melhores marcas do mercado.</p>
+            
+            <div class="bento-grid">
+                <div class="bento-item item-large fade-in">
+                    <img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Setup Gamer Customizado">
+                    <div class="bento-info">
+                        <h3>PC Gamer Custom</h3>
+                        <p>Máquinas montadas sob encomenda com Cable Management impecável.</p>
+                    </div>
+                </div>
+                
+                <div class="bento-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Computador de Escritório">
+                    <div class="bento-info">
+                        <h3>Linha Office</h3>
+                        <p>Silenciosos e velozes para empresas.</p>
+                    </div>
+                </div>
+                
+                <div class="bento-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1718372146650-798b9fb23573?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Acessórios Gamers">
+                    <div class="bento-info">
+                        <h3>Periféricos</h3>
+                        <p>Teclados, Mouses e Headsets de alta precisão.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Banner -->
+    <section id="contato" class="contact-banner fade-in">
+        <div class="container contact-content">
+            <div class="contact-text">
+                <h2>Seu PC parou? Quer montar um novo?</h2>
+                <p>Nossos técnicos estão online no WhatsApp agora para tirar suas dúvidas e fazer orçamentos.</p>
+            </div>
+            <a href="https://wa.me/5511999999999" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Padrão -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <h3><i class="fa-solid fa-microchip"></i> Tech<span>Red</span></h3>
+                <p>Performance máxima, reparo garantido.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechRed Informática. Rua da Tecnologia, 1024 - São Paulo, SP.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
