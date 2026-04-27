@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCell | Premium Store</title>
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Elegante -->
+    <header id="header">
+        <div class="container navbar">
+            <a href="#" class="logo">TECH<span>CELL.</span></a>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Vitrine</a></li>
+                    <li><a href="#diferenciais">Nossa Loja</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">A sua loja premium</span>
+                <h1>Tecnologia que acompanha seu ritmo.</h1>
+                <p>Smartphones, áudio de alta fidelidade e acessórios premium. Visite nossa loja física e saia com o seu aparelho configurado e pronto para uso.</p>
+                <button class="btn-primary" onclick="openWhatsApp('Olá! Vi o site e gostaria de saber o endereço da loja e disponibilidade de aparelhos.')">
+                    Falar com Vendedor <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smartphone Premium">
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais (Focado em Loja Física) -->
+    <section id="diferenciais" class="features">
+        <div class="container features-grid">
+            <div class="feature-box">
+                <i class="fas fa-store"></i>
+                <h3>Retirada Imediata</h3>
+                <p>Compre e retire na hora em nossa loja física. Sem espera, sem ansiedade.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-check-circle"></i>
+                <h3>Garantia Local</h3>
+                <p>Suporte direto no balcão. Nossa equipe está pronta para resolver qualquer problema.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-mobile"></i>
+                <h3>Teste Antes de Levar</h3>
+                <p>Aparelhos de mostruário para você sentir o design e a performance antes da compra.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vitrine de Produtos (Clean, sem botões) -->
+    <section id="produtos" class="showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que você encontra aqui</h2>
+                <p>Trabalhamos com as melhores marcas do mercado.</p>
+            </div>
+            
+            <div class="showcase-grid">
+                <!-- Categoria 1 -->
+                <div class="showcase-card">
+                    <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smartphones">
+                    <div class="card-overlay">
+                        <h3>Smartphones</h3>
+                        <p>Últimos Lançamentos</p>
+                    </div>
+                </div>
+
+                <!-- Categoria 2 -->
+                <div class="showcase-card">
+                    <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Áudio">
+                    <div class="card-overlay">
+                        <h3>Áudio Pro</h3>
+                        <p>Fones e Caixas de Som</p>
+                    </div>
+                </div>
+
+                <!-- Categoria 3 -->
+                <div class="showcase-card">
+                    <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Acessórios">
+                    <div class="card-overlay">
+                        <h3>Proteção</h3>
+                        <p>Capas e Películas</p>
+                    </div>
+                </div>
+
+                <!-- Categoria 4 -->
+                <div class="showcase-card">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Energia">
+                    <div class="card-overlay">
+                        <h3>Energia</h3>
+                        <p>Fontes e Powerbanks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer com Informações da Loja -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>TECH<span>CELL.</span></h2>
+                <p>Sua referência em tecnologia e acessórios premium na cidade.</p>
+            </div>
+            <div class="footer-address">
+                <h4>Visite nossa loja</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Rua da Tecnologia, 123 - Centro</p>
+                <p><i class="fas fa-clock"></i> Seg a Sex: 09h às 18h | Sáb: 09h às 13h</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <!-- Segundo e último botão do whatsapp na página -->
+                <button class="btn-footer-wa" onclick="openWhatsApp('Olá! Gostaria de tirar uma dúvida.')">
+                    <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                </button>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TechCell. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante Discreto -->
+    <a href="#" class="float-wa" onclick="openWhatsApp('Olá, vim pelo site e preciso de ajuda.')">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
