@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian | A Verdadeira Gastronomia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="container header-content">
+            <!-- 1. BLOCO DA ESQUERDA (LOGO) -->
+            <a href="#" class="logo">
+                Italian<span class="dot-green">.</span>
+            </a>
+            
+            <!-- 2. BLOCO DA DIREITA (NAVEGAÇÃO) -->
+            <nav class="nav-container">
+                <!-- Botão Menu Mobile (Hamburguer) -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#experiencia">A Experiência</a></li>
+                    <li><a href="#destaques">Destaques</a></li>
+                    <li><a href="#reserva" class="btn-outline">Fazer Reserva</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content fade-in">
+            <span class="hero-subtitle">Benvenuto in Italia</span>
+            <h1>Paixão em cada detalhe, <br><em>sabor em cada prato.</em></h1>
+            <p>Descubra a fusão perfeita entre a tradição acolhedora das cantinas italianas e a sofisticação da alta gastronomia.</p>
+            <div class="hero-buttons">
+                <a href="#reserva" class="btn-solid">Reserve sua mesa</a>
+                <a href="#menu-digital" class="btn-text">Ver Cardápio Digital</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="container section-padding">
+        <div class="experience-grid">
+            <div class="experience-image-wrapper fade-in">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ambiente do Restaurante" class="arch-img">
+                <div class="experience-badge">Desde 1998</div>
+            </div>
+            <div class="experience-text fade-in">
+                <span class="section-subtitle">Nossa Essência</span>
+                <h2>O coração da Itália, agora na sua mesa.</h2>
+                <p>Nossa cozinha é um tributo às receitas de família passadas de geração em geração. Importamos os melhores azeites da Úmbria, tomates de San Marzano e preparamos nossa massa fresca diariamente.</p>
+                <p>No <strong>Italian</strong>, você não vem apenas para comer. Você vem para celebrar a vida, regada a um excelente vinho e rodeada de quem você ama.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="destaques" class="bg-dark section-padding">
+        <div class="container">
+            <div class="text-center fade-in">
+                <span class="section-subtitle text-light-accent">Assinatura do Chef</span>
+                <h2 class="text-white">Clássicos Italian</h2>
+            </div>
+            
+            <div class="menu-cards">
+                <div class="card fade-in">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1598866594230-a7c12756260f?q=80&w=1008&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Massa fresca">
+                    </div>
+                    <div class="card-content">
+                        <h3>Spaghetti al Tartufo</h3>
+                        <p>Massa fresca artesanal envolta em creme de queijo pecorino e trufas negras fatiadas na mesa.</p>
+                    </div>
+                </div>
+                <div class="card fade-in" style="transition-delay: 0.2s;">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza">
+                    </div>
+                    <div class="card-content">
+                        <h3>Margherita Verace</h3>
+                        <p>Massa de fermentação natural de 48h, molho San Marzano, mozzarella di bufala e manjericão fresco.</p>
+                    </div>
+                </div>
+                <div class="card fade-in" style="transition-delay: 0.4s;">
+                    <div class="card-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1695028378225-97fbe39df62a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tiramisu">
+                    </div>
+                    <div class="card-content">
+                        <h3>Tiramisù Classico</h3>
+                        <p>A verdadeira receita veneziana. Biscoitos savoiardi banhados em café espresso e creme de mascarpone.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center fade-in mt-4" id="menu-digital">
+                <a href="#" id="open-menu" class="btn-solid-gold w-mobile-100">Explorar Cardápio</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reserva" class="container section-padding">
+        <div class="reservation-box fade-in">
+            <div class="reservation-info">
+                <h2>Garanta sua experiência</h2>
+                <p>Nossas mesas são limitadas para garantir um atendimento intimista. Preencha os dados e prepare-se para uma noite inesquecível.</p>
+                
+                <div class="contact-details">
+                    <p><strong>Funcionamento:</strong></p>
+                    <p>Terça a Sábado: 19h às 23h30</p>
+                    <p>Domingo: 12h às 16h</p>
+                </div>
+            </div>
+            
+            <div class="reservation-form-container">
+                <div class="flag-line"></div>
+                <form id="reservation-form">
+                    <input type="text" id="nome" required placeholder="Seu Nome Completo">
+                    <input type="email" id="email" required placeholder="Seu E-mail">
+                    
+                    <div class="row">
+                        <input type="date" id="data" required>
+                        <input type="time" id="hora" required>
+                    </div>
+                    
+                    <select id="pessoas" required>
+                        <option value="" disabled selected>Número de Pessoas</option>
+                        <option value="2">Mesa para 2</option>
+                        <option value="4">Mesa para 4</option>
+                        <option value="6">Mesa para 6</option>
+                        <option value="Evento">Evento Privado (8+)</option>
+                    </select>
+                    
+                    <button type="submit" class="btn-solid w-100">Confirmar Reserva</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <h2 class="footer-logo">Italian.</h2>
+            <div class="footer-flag">
+                <span class="c-green"></span>
+                <span class="c-white"></span>
+                <span class="c-red"></span>
+            </div>
+            <p>Rua da Gastronomia, 123 - Jardins, Sete Lagoas</p>
+            <p class="copyright">&copy; 2023 Restaurante Italian. A arte de comer bem.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
