@@ -1,0 +1,222 @@
+/* CSS Personalizado para 7 Steak House - Estética de Alto Luxo */
+
+:root {
+    --color-bg-dark: #070707;
+    --color-bg-card: #121212;
+    --color-gold: #c5a880;
+    --color-gold-dark: #8c6239;
+    --color-red: #c62828;
+    --color-red-dark: #8c1c1c;
+    --color-text-light: #f5f3ef;
+    --color-text-muted: #a19f9a;
+}
+
+/* Base resets and overrides */
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.font-serif {
+    font-family: 'Cinzel', serif;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0b0b;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-gold-dark);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+}
+
+/* Sophisticated Background Effects */
+.luxury-glow {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(140, 98, 57, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Custom Premium Cards (Ditching standard Tailwind cards) */
+.premium-card {
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%);
+    border: 1px solid rgba(197, 168, 128, 0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(197, 168, 128, 0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(197, 168, 128, 0.35);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85), 0 0 20px rgba(140, 98, 57, 0.15);
+}
+
+.premium-card:hover::after {
+    opacity: 1;
+}
+
+/* Fine-detailed Borders and Accents */
+.border-gold-accent {
+    border-image: linear-gradient(to right, var(--color-gold-dark), var(--color-gold), transparent) 1;
+}
+
+/* Custom Luxury Buttons */
+.btn-luxury {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: var(--color-red);
+    border: 1px solid var(--color-red);
+    border-radius: 1px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 0; height: 100%;
+    background: var(--color-gold-dark);
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+}
+
+.btn-luxury:hover {
+    color: #ffffff;
+    border-color: var(--color-gold-dark);
+    box-shadow: 0 10px 25px rgba(140, 98, 57, 0.3);
+}
+
+.btn-luxury:hover::before {
+    width: 100%;
+}
+
+.btn-outline-luxury {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    background: transparent;
+    border: 1px solid rgba(197, 168, 128, 0.3);
+    border-radius: 1px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline-luxury:hover {
+    color: #ffffff;
+    border-color: var(--color-gold);
+    background: rgba(197, 168, 128, 0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom inputs for the reservation form */
+.luxury-input-group {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.luxury-input {
+    background: rgba(255, 255, 255, 0.02);
+    border: none;
+    border-bottom: 1px solid rgba(197, 168, 128, 0.25);
+    padding: 14px 8px;
+    color: var(--color-text-light);
+    font-size: 14px;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 0;
+}
+
+.luxury-input:focus {
+    outline: none;
+    border-bottom-color: var(--color-gold);
+    background: rgba(197, 168, 128, 0.04);
+}
+
+.luxury-label {
+    position: absolute;
+    left: 8px;
+    top: 14px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Floating labels effect */
+.luxury-input:focus ~ .luxury-label,
+.luxury-input:not(:placeholder-shown) ~ .luxury-label {
+    top: -12px;
+    font-size: 10px;
+    color: var(--color-gold);
+}
+
+/* Custom Select styling */
+select.luxury-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c5a880'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 20px;
+}
+
+/* Smooth Image hover effects */
+.hover-reveal-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-reveal-img img {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-reveal-img:hover img {
+    transform: scale(1.06);
+}
+
+/* Decorative script/serif subhead */
+.luxury-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Steak House | Gastronomia Contemporânea & Cortes Premium</title>
+    
+    <!-- Tailwind CSS para sistema de grid responsivo e utilitários de estrutura -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cinzel (luxo/serifa) e Montserrat (clean/sem-serifa) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link para o CSS Personalizado de Alta Sofisticação -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased selection:bg-[#c62828] selection:text-white overflow-x-hidden">
+
+    <!-- HEADER / NAVEGAÇÃO PREMIUM -->
+    <header class="fixed top-0 w-full z-50 backdrop-blur-md bg-[#070707]/85 border-b border-neutral-900 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="input_file_1.png" alt="7 Steak House Logo" class="h-12 md:h-14 w-auto object-contain">
+            </a>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 text-[11px] tracking-[0.2em] uppercase">
+                <a href="#inicio" class="text-neutral-300 hover:text-[#c5a880] transition-colors">Início</a>
+                <a href="#sobre" class="text-neutral-300 hover:text-[#c5a880] transition-colors">A Casa</a>
+                <a href="#diferenciais" class="text-neutral-300 hover:text-[#c5a880] transition-colors">Diferenciais</a>
+                <a href="#reservas" class="text-[#c5a880] hover:text-white transition-colors">Reservas</a>
+                <a href="#cardapio" class="text-neutral-300 hover:text-[#c5a880] transition-colors">Cardápio</a>
+            </nav>
+            
+            <!-- CTA Cardápio Digital -->
+            <div class="hidden sm:block">
+                <a href="https://7steakhouserestaurante.eattake.com/#/ListaDeProdutos" target="_blank" class="btn-outline-luxury">
+                    Ver Cardápio
+                </a>
+            </div>
+
+            <!-- Botão Mobile Menu -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="menu-mobile" class="hidden md:hidden bg-[#070707] border-t border-neutral-900 px-6 py-6 flex-col space-y-4 text-[10px] tracking-widest uppercase">
+            <a href="#inicio" class="text-neutral-300 hover:text-white py-2 block">Início</a>
+            <a href="#sobre" class="text-neutral-300 hover:text-white py-2 block">A Casa</a>
+            <a href="#diferenciais" class="text-neutral-300 hover:text-white py-2 block">Diferenciais</a>
+            <a href="#reservas" class="text-[#c5a880] hover:text-white py-2 block">Reservas</a>
+            <a href="#cardapio" class="text-neutral-300 hover:text-white py-2 block">Cardápio</a>
+            <a href="https://7steakhouserestaurante.eattake.com/#/ListaDeProdutos" target="_blank" class="block text-center py-3 bg-[#c62828] text-white font-semibold rounded-sm w-full">Cardápio Digital</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-28 pb-12 overflow-hidden bg-gradient-to-b from-neutral-950 via-[#14110f] to-[#070707]">
+        <!-- Malha de textura sutil no fundo -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8c6239_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Coluna de Texto -->
+            <div class="lg:col-span-7 text-left space-y-8">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-800 bg-neutral-900 bg-opacity-60 text-[10px] tracking-widest uppercase text-[#c5a880]">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#c62828] animate-pulse"></span> Sete Lagoas / MG
+                </div>
+                
+                <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl text-white leading-tight">
+                    Gastronomia, ambiente <br class="hidden md:inline"/>
+                    e momentos que merecem <br class="hidden md:inline"/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f5f3ef] via-[#c5a880] to-[#8c6239] font-bold">ser vividos.</span>
+                </h1>
+                
+                <p class="text-[#a19f9a] text-sm md:text-base leading-relaxed max-w-xl">
+                    O <span class="text-white font-medium">7 Steak House</span> propõe uma experiência contemporânea sofisticada. Cortes premium preparados na brasa, pratos autorais que encantam o paladar e uma coquetelaria requintada para brindar à vida.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#reservas" class="btn-luxury">
+                        Fazer uma Reserva
+                    </a>
+                    <a href="https://7steakhouserestaurante.eattake.com/#/ListaDeProdutos" target="_blank" class="btn-outline-luxury">
+                        Explorar Cardápio
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Coluna de Imagem (Banco de Imagens - Steak Premium) -->
+            <div class="lg:col-span-5 flex justify-center relative">
+                <div class="absolute -inset-2 rounded-sm border border-[#8c6239]/20 opacity-40 blur-sm transform translate-x-2 translate-y-2"></div>
+                <div class="relative rounded-sm overflow-hidden border border-neutral-800 bg-neutral-900 premium-shadow max-w-sm lg:max-w-md hover-reveal-img">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1000&auto=format&fit=crop" alt="Cortes Nobres do 7 Steak House" class="w-[450px] h-[550px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/50 to-transparent p-6 pt-16">
+                        <p class="luxury-subtitle mb-1">Cortes Especiais</p>
+                        <p class="text-white font-serif text-lg">Preparação impecável na grelha</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE A CASA / EXPERIÊNCIA -->
+    <section id="sobre" class="py-24 bg-[#070707] border-t border-neutral-900 relative">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <!-- Imagem de Ambiente (Banco de Imagens - Restaurante Acolhedor e Elegante) -->
+            <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center relative">
+                <div class="absolute -inset-3 rounded-sm border border-neutral-900 transform -translate-x-3 -translate-y-3"></div>
+                <div class="relative rounded-sm overflow-hidden border border-neutral-800 bg-neutral-900 premium-shadow max-w-sm hover-reveal-img">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop" alt="Ambiente do 7 Steak House" class="w-full h-[500px] object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/45 to-transparent p-6 pt-12 text-center lg:text-left">
+                        <p class="luxury-subtitle mb-1">Ambiente Acolhedor</p>
+                        <p class="text-white text-xs opacity-75">Sofisticação e conforto projetados para você</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Texto Conceitual -->
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-8">
+                <p class="luxury-subtitle">Elegância & Conforto</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-white">
+                    Uma atmosfera de sofisticação <br>
+                    <span class="text-[#c5a880]">descomplicada e acolhedora</span>.
+                </h2>
+                <div class="w-16 h-0.5 bg-[#c62828]"></div>
+                <p class="text-[#a19f9a] text-sm md:text-base leading-relaxed">
+                    Localizado no coração de Sete Lagoas, o <span class="text-white">7 Steak House</span> foi idealizado com a proposta de unir excelência gastronômica e acolhimento para diferentes públicos. Um projeto moderno, com iluminação suave, móveis aconchegantes e materiais que combinam o rústico com o refinado.
+                </p>
+                <p class="text-[#a19f9a] text-sm md:text-base leading-relaxed">
+                    Cada detalhe convida a prolongar a conversa à mesa, desde a iluminação indireta até o nosso espaço estruturado para celebrar a vida. De jantares íntimos a encontros descontraídos de negócios, o 7 Steak House oferece o cenário ideal.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                    <div class="border-l-2 border-[#8c6239] pl-4">
+                        <h4 class="text-white font-serif font-bold text-lg">Cortes Selecionados</h4>
+                        <p class="text-xs text-neutral-400 mt-1">Grelhados preparados com precisão, da picanha clássica ao nobre ancho.</p>
+                    </div>
+                    <div class="border-l-2 border-[#c62828] pl-4">
+                        <h4 class="text-white font-serif font-bold text-lg">O Bar como Protagonista</h4>
+                        <p class="text-xs text-neutral-400 mt-1">Harmonização precisa com uma seleta carta de vinhos e drinks autorais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO GASTRONOMIA EM DESTAQUE (Banco de Imagens - Prato Contemporâneo) -->
+    <section class="py-24 bg-[#111111] border-y border-neutral-900">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <p class="luxury-subtitle">Variedade & Sofisticação</p>
+                <h3 class="font-serif text-2xl md:text-3xl text-white">Alta Gastronomia Além das Carnes</h3>
+                <div class="w-12 h-0.5 bg-[#c5a880]"></div>
+                <p class="text-[#a19f9a] text-sm leading-relaxed">
+                    Nossa cozinha contemporânea abraça a diversidade. Além dos grelhados impecáveis que dão nome à casa, oferecemos um leque de opções refinadas que incluem pratos clássicos como risotos de frutos do mar bem elaborados, opções veganas e pratos infantis especiais.
+                </p>
+                <p class="text-[#a19f9a] text-sm leading-relaxed">
+                    Harmonize suas escolhas com rótulos de vinhos nacionais e importados de nossa adega ou permita que nossos mixologistas sugiram a combinação ideal de coquetéis clássicos ou criações autorais.
+                </p>
+            </div>
+            <div class="lg:col-span-5">
+                <div class="relative rounded-sm overflow-hidden border border-neutral-800 bg-neutral-900 premium-shadow hover-reveal-img">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop" alt="Prato Gourmet no 7 Steak House" class="w-full h-[320px] object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO RESERVAS (Bespoke Reservation Experience) -->
+    <section id="reservas" class="py-28 relative bg-[#070707] overflow-hidden">
+        <!-- Detalhes de iluminação sutil (Luxury glow) -->
+        <div class="luxury-glow w-[500px] h-[500px] -top-24 -left-24 opacity-40"></div>
+        <div class="luxury-glow w-[600px] h-[600px] -bottom-36 -right-36 opacity-30"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <p class="luxury-subtitle">Private Booking</p>
+                    <h2 class="font-serif text-3xl md:text-5xl text-white leading-tight">
+                        Reserve sua <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f5f3ef] to-[#c5a880] font-bold">Experiência</span>
+                    </h2>
+                    <div class="w-16 h-0.5 bg-[#c62828]"></div>
+                    <p class="text-[#a19f9a] text-sm md:text-base leading-relaxed">
+                        Garantir sua mesa no <strong class="text-white">7 Steak House</strong> é o primeiro passo para uma jornada sensorial incomparável. Seja para uma comemoração especial, um almoço executivo ou um jantar íntimo a dois, oferecemos o ambiente perfeito.
+                    </p>
+                    
+                    <div class="space-y-6 pt-4 border-t border-neutral-900 text-xs text-[#a19f9a]">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-[#8c6239]/40 flex items-center justify-center text-[#c5a880] shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xs tracking-widest text-white uppercase font-semibold">Tolerância de Atraso</h4>
+                                <p class="text-neutral-400 mt-1 leading-relaxed">As mesas reservadas são garantidas por até 15 minutos do horário agendado. Após este período, a mesa será liberada.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-[#c62828]/40 flex items-center justify-center text-[#c62828] shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xs tracking-widest text-white uppercase font-semibold">Eventos Especiais</h4>
+                                <p class="text-neutral-400 mt-1 leading-relaxed">Para reservas acima de 12 convidados ou eventos fechados, entre em contato via WhatsApp direto: (31) 99560-0486.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="premium-card p-8 md:p-12 rounded-sm">
+                        <div id="form-container">
+                            <h3 class="font-serif text-xl md:text-2xl text-white mb-8">Preencha seus detalhes</h3>
+                            <form id="booking-form" class="space-y-6" onsubmit="handleReservationSubmit(event)">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="luxury-input-group">
+                                        <input type="text" id="name" required class="luxury-input" placeholder=" ">
+                                        <label class="luxury-label" for="name">Nome Completo</label>
+                                    </div>
+                                    <div class="luxury-input-group">
+                                        <input type="tel" id="phone" required class="luxury-input" placeholder=" ">
+                                        <label class="luxury-label" for="phone">WhatsApp (com DDD)</label>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div class="luxury-input-group">
+                                        <input type="date" id="date" required class="luxury-input" placeholder=" ">
+                                        <label class="luxury-label" for="date">Data</label>
+                                    </div>
+                                    <div class="luxury-input-group">
+                                        <select id="time" required class="luxury-input">
+                                            <option value="" disabled selected hidden></option>
+                                            <option value="11:30">11:30</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="18:30">18:30</option>
+                                            <option value="19:00">19:00</option>
+                                            <option value="20:00">20:00</option>
+                                            <option value="21:00">21:00</option>
+                                        </select>
+                                        <label class="luxury-label" for="time">Horário</label>
+                                    </div>
+                                    <div class="luxury-input-group">
+                                        <select id="guests" required class="luxury-input">
+                                            <option value="" disabled selected hidden></option>
+                                            <option value="1 Pessoa">1 Pessoa</option>
+                                            <option value="2 Pessoas">2 Pessoas</option>
+                                            <option value="3 Pessoas">3 Pessoas</option>
+                                            <option value="4 Pessoas">4 Pessoas</option>
+                                            <option value="5 a 8 Pessoas">5 a 8 Pessoas</option>
+                                            <option value="9 a 12 Pessoas">9 a 12 Pessoas</option>
+                                        </select>
+                                        <label class="luxury-label" for="guests">Convidados</label>
+                                    </div>
+                                </div>
+                                <div class="luxury-input-group">
+                                    <select id="occasion" class="luxury-input">
+                                        <option value="" disabled selected hidden></option>
+                                        <option value="Casual">Casual</option>
+                                        <option value="Aniversário">Aniversário</option>
+                                        <option value="Jantar Romântico">Jantar Romântico / Noivado</option>
+                                        <option value="Reunião de Negócios">Reunião de Negócios</option>
+                                    </select>
+                                    <label class="luxury-label" for="occasion">Ocasião Especial (Opcional)</label>
+                                </div>
+                                
+                                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                    <button type="submit" class="btn-luxury w-full sm:w-auto">
+                                        Solicitar Reserva
+                                    </button>
+                                    <span class="text-xs text-neutral-500">ou se preferir</span>
+                                    <a href="https://wa.me/5531995600486" target="_blank" class="text-xs tracking-widest text-[#c5a880] hover:text-white uppercase font-bold transition-colors">
+                                        Via WhatsApp &rarr;
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Confirmation state (Hidden by default) -->
+                        <div id="booking-success" class="hidden text-center py-8 space-y-6">
+                            <div class="w-16 h-16 bg-[#8c6239]/20 text-[#c5a880] rounded-full flex items-center justify-center mx-auto mb-2 border border-[#c5a880]/30">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h4 class="font-serif text-2xl text-white">Solicitação Recebida</h4>
+                            <p class="text-neutral-400 text-sm max-w-md mx-auto leading-relaxed">
+                                Obrigado, <span id="success-name" class="text-white font-medium"></span>. Recebemos sua solicitação para o dia <span id="success-date" class="text-white font-medium"></span> às <span id="success-time" class="text-white font-medium"></span> para <span id="success-guests" class="text-white font-medium"></span>. Entraremos em contato em instantes no seu WhatsApp para confirmar.
+                            </p>
+                            <div class="pt-4">
+                                <button onclick="resetBookingForm()" class="btn-outline-luxury">
+                                    Fazer nova reserva
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DIFERENCIAIS -->
+    <section id="diferenciais" class="py-24 bg-[#111111] relative">
+        <div class="container mx-auto px-6 text-center space-y-12">
+            <div class="space-y-4 max-w-2xl mx-auto">
+                <p class="luxury-subtitle">O que nos move</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-white">A Arte de Servir com Excelência</h2>
+                <div class="w-12 h-0.5 bg-[#c62828] mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+                <!-- Card 1 -->
+                <div class="p-8 premium-card rounded-sm text-left space-y-6">
+                    <span class="text-2xl text-[#c62828] font-serif">01</span>
+                    <h3 class="font-serif text-lg text-white">Ingredientes Nobres</h3>
+                    <p class="text-[#a19f9a] text-xs md:text-sm leading-relaxed">
+                        Trabalhamos exclusivamente com cortes nobres selecionados e acompanhamentos frescos preparados no dia, garantindo o sabor e maciez indiscutíveis de cada prato.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 premium-card rounded-sm text-left space-y-6">
+                    <span class="text-2xl text-[#8c6239] font-serif">02</span>
+                    <h3 class="font-serif text-lg text-white">Menu Versátil</h3>
+                    <p class="text-[#a19f9a] text-xs md:text-sm leading-relaxed">
+                        A diversidade é nosso forte. Além de assados extraordinários, oferecemos parmegianas, pratos infantis, opções veganas e risotos contemporâneos.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 premium-card rounded-sm text-left space-y-6">
+                    <span class="text-2xl text-[#c5a880] font-serif">03</span>
+                    <h3 class="font-serif text-lg text-white">Atendimento Impecável</h3>
+                    <p class="text-[#a19f9a] text-xs md:text-sm leading-relaxed">
+                        Nossa equipe é altamente treinada para antecipar suas necessidades, garantindo uma experiência agradável e uma condução acolhedora à mesa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER DE CHAMADA: CARDÁPIO DIGITAL -->
+    <section id="cardapio" class="py-24 bg-gradient-to-b from-[#111111] via-[#241B15] to-neutral-950 relative overflow-hidden text-center border-t border-neutral-900">
+        <div class="absolute inset-0 bg-[radial-gradient(#c62828_1px,transparent_1px)] opacity-[0.03] [background-size:24px_24px]"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 max-w-4xl space-y-8">
+            <div class="inline-block transform hover:scale-105 transition-all-custom duration-500">
+                <img src="input_file_1.png" alt="7 Steak House Logo" class="h-20 mx-auto">
+            </div>
+            
+            <h2 class="font-serif text-3xl md:text-5xl text-white tracking-wide leading-tight">
+                Pronto para descobrir <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#c5a880] to-[#c62828] font-bold">nosso sabor?</span>
+            </h2>
+            
+            <p class="text-neutral-300 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
+                Consulte nosso cardápio digital completo de forma fácil e interativa. Planeje sua próxima refeição, explore nossos cortes finos ou faça seu pedido diretamente online.
+            </p>
+            
+            <div class="pt-6">
+                <a href="https://7steakhouserestaurante.eattake.com/#/ListaDeProdutos" target="_blank" class="btn-luxury inline-flex gap-2">
+                    <span>Acessar Cardápio Digital</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 animate-bounce">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+                <p class="text-neutral-500 text-xs mt-4">Disponível para consulta em mesa ou pedidos delivery rápidos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / RODAPÉ -->
+    <footer class="bg-neutral-950 text-neutral-400 py-16 border-t border-neutral-900">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            <!-- Info Brand -->
+            <div class="md:col-span-4 space-y-6">
+                <img src="input_file_1.png" alt="7 Steak House Logo" class="h-12 w-auto object-contain">
+                <p class="text-xs leading-relaxed max-w-sm">
+                    Um restaurante que transcende o ato de comer, proporcionando um ponto de encontro idealizado para celebrar a vida e os bons sabores da culinária contemporânea.
+                </p>
+            </div>
+            
+            <!-- Horários de Funcionamento -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="font-serif text-white text-sm tracking-wider uppercase">Horários de Funcionamento</h4>
+                <div class="w-8 h-0.5 bg-[#c62828]"></div>
+                <ul class="text-xs space-y-2">
+                    <li><span class="text-white font-medium">Terça a Quinta:</span> Bar das 17h às 23h</li>
+                    <li><span class="text-white font-medium">Sexta e Sábado:</span> Steak House das 11h às 23h</li>
+                    <li><span class="text-white font-medium">Domingo:</span> Almoço das 11h às 15h</li>
+                </ul>
+            </div>
+            
+            <!-- Contatos e Localização -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="font-serif text-white text-sm tracking-wider uppercase">Contato e Endereço</h4>
+                <div class="w-8 h-0.5 bg-[#c62828]"></div>
+                <ul class="text-xs space-y-3">
+                    <li class="flex items-start gap-2">
+                        <svg class="w-4 h-4 text-[#8c6239] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span>Rua Paulo Frontin, 720 - Centro<br>Sete Lagoas - MG, CEP 35700-049</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-[#8c6239] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span>(31) 99560-0486</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 mt-12 pt-8 border-t border-neutral-900 text-center text-[10px] tracking-wider uppercase text-neutral-600">
+            <p>&copy; 2026 7 Steak House. Todos os direitos reservados. Design Luxo & Clean.</p>
+        </div>
+    </footer>
+
+    <!-- Script de Interação do Menu Mobile e Reserva -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menuMobile = document.getElementById('menu-mobile');
+
+        menuBtn.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+            menuMobile.classList.toggle('flex');
+        });
+
+        // Fecha o menu móvel ao clicar em um link
+        const mobileLinks = menuMobile.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuMobile.classList.add('hidden');
+                menuMobile.classList.remove('flex');
+            });
+        });
+
+        // Lógica de Reserva
+        function handleReservationSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const dateInput = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const guests = document.getElementById('guests').value;
+            
+            // Inverter a data para o padrão pt-BR
+            const formattedDate = dateInput.split('-').reverse().join('/');
+
+            // Esconder Formulário e Mostrar Mensagem de Sucesso
+            document.getElementById('form-container').classList.add('hidden');
+            const successDiv = document.getElementById('booking-success');
+            successDiv.classList.remove('hidden');
+            
+            // Popular dados de sucesso
+            document.getElementById('success-name').innerText = name;
+            document.getElementById('success-date').innerText = formattedDate;
+            document.getElementById('success-time').innerText = time;
+            document.getElementById('success-guests').innerText = guests;
+        }
+
+        function resetBookingForm() {
+            document.getElementById('booking-form').reset();
+            document.getElementById('booking-success').classList.add('hidden');
+            document.getElementById('form-container').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
